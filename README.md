@@ -26,5 +26,5 @@ Further Info
 [Sinatra-testing][]  
 
 [Source]: http://iamneato.com/2009/08/01/rspec-and-sinatra-quick-start
-[RSpec]: 
+[RSpec]: http://rspec.info/ 
 [Sinatra-testing]: http://www.sinatrarb.com/testing.html
