@@ -7,7 +7,7 @@ Requiremnts for this are Sinatra, Rspec and rack-test
 
 from here you can run:
 
-    ruby app.rb
+    ruby myapp.rb
 
 Then visit 127.0.0.1:4567
 
