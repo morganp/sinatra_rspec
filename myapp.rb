@@ -11,28 +11,27 @@ module MyModule
       set :public, "public"
 
 
-      #morganp adding this should remove the need for speratre configure blocks for ActiveRecord 
-      set :root, File.dirname(__FILE__)
+      #This should remove the need for speratre configure blocks for ActiveRecord 
+      #set :root, File.dirname(__FILE__)
+      # Not required for the Active record currently as loading db based on __FILE__
 
       configure :production, :development do
-         ActiveRecord::Base.establish_connection(
-            :adapter    => 'sqlite3',
-            :database   => './db/test.db'
-         )
-
          puts "DB in Normal Mode"
       end
 
       configure  :test do
-         ActiveRecord::Base.establish_connection(
-            :adapter    => 'sqlite3',
-            :database   => '../db/test.db'
-         )
-
          puts "DB in Test Mode"
       end
       puts "ENV: #{environment}"
-      
+     
+      ActiveRecord::Base.establish_connection(
+         :adapter    => 'sqlite3',
+         :database   => File.dirname(__FILE__) + '/db/test.db'
+      )
+
+
+
+
       class Extension < ActiveRecord::Base
       end
 

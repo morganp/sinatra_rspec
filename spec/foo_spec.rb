@@ -1,9 +1,10 @@
   require 'rubygems'
   require 'active_record'
 
-  ActiveRecord::Base.establish_connection(
+      puts File.dirname(__FILE__) + '/../db/test.db'
+      ActiveRecord::Base.establish_connection(
          :adapter    => 'sqlite3',
-         :database   => '../db/test.db'
+         :database   => File.dirname(__FILE__) + '/../db/test.db'
       )
 
       class Extension < ActiveRecord::Base
