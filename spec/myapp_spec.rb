@@ -10,7 +10,6 @@ describe "My App" do
    end
 
   it "should respond to /" do
-      puts ":environment " + environment
     get '/'
     last_response.should be_ok
     last_response.body.should == "Hello World! a"

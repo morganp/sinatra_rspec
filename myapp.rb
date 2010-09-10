@@ -10,6 +10,10 @@ module MyModule
       set :show_exceptions, true 
       set :public, "public"
 
+
+      #morganp adding this should remove the need for speratre configure blocks for ActiveRecord 
+      set :root, File.dirname(__FILE__)
+
       configure :production, :development do
          ActiveRecord::Base.establish_connection(
             :adapter    => 'sqlite3',
