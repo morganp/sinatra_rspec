@@ -4,8 +4,6 @@ describe "My App" do
   include Rack::Test::Methods
 
    def app
-      #@app ||= Sinatra::Application
-      set :environment, :test
       MyModule::MyApp
    end
 
