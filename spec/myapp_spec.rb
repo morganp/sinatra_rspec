@@ -1,4 +1,6 @@
+
 require File.dirname(__FILE__) + '/spec_helper'
+require File.join(File.dirname(__FILE__), '..', 'myapp.rb')
 
 describe "My App" do
   include Rack::Test::Methods
