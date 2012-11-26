@@ -5,9 +5,9 @@
 require 'rubygems'
 require 'sinatra'
 require 'rack/test'
-require 'spec'
-require 'spec/autorun'
-require 'spec/interop/test'
+require 'rspec'
+require 'rspec/autorun'
+#require 'rspec/interop/test'
 
 # set test environment
 Sinatra::Base.set :environment, :test
